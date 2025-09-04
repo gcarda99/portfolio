@@ -15,7 +15,7 @@
 
 * {
   margin: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
@@ -26,16 +26,13 @@ a {
 /* scrollBar */
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    display: none;
 }
 ::-webkit-scrollbar-track {
     background: #555;
 }
 ::-webkit-scrollbar-thumb {
-    background: #555;
-  border-radius: 10px;
-  transition: 0.3s;
+    display: none;
 }
 
 img{

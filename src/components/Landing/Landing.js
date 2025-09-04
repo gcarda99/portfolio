@@ -1,20 +1,15 @@
-import React, { useContext } from 'react';
-import { Button } from '@material-ui/core';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { makeStyles } from '@material-ui/core/styles';
+import React, {useContext} from 'react';
+import {Button} from '@material-ui/core';
+import {NavHashLink as NavLink} from 'react-router-hash-link';
+import {makeStyles} from '@material-ui/core/styles';
 
 import './Landing.css';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { headerData } from '../../data/headerData';
-import { socialsData } from '../../data/socialsData';
+import {ThemeContext} from '../../contexts/ThemeContext';
+import {headerData} from '../../data/headerData';
+import {socialsData} from '../../data/socialsData';
 
-import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
-} from 'react-icons/fa';
+import {FaEnvelope, FaInstagram, FaLinkedin,} from 'react-icons/fa';
+
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
@@ -37,9 +32,6 @@ function Landing() {
                 color: theme.secondary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
-                width: '180px',
-            },
         },
         contactBtn: {
             backgroundColor: theme.primary,
@@ -58,10 +50,7 @@ function Landing() {
                 backgroundColor: theme.secondary,
                 color: theme.tertiary,
                 border: `3px solid ${theme.tertiary}`,
-            },
-            [t.breakpoints.down('sm')]: {
-                display: 'none',
-            },
+            }
         },
     }));
 
@@ -88,55 +77,29 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.github && (
+                        {socialsData.instagram && (
                             <a
-                                href={socialsData.github}
+                                href={socialsData.instagram}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaGithub
+                                <FaInstagram
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='GitHub'
+                                    aria-label='Instagram'
                                 />
                             </a>
                         )}
-                        {socialsData.twitter && (
+                        {socialsData.gmail && (
                             <a
-                                href={socialsData.twitter}
+                                href={socialsData.gmail}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaTwitter
+                                <FaEnvelope
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
+                                    aria-label='Gmail'
                                 />
                             </a>
                         )}
@@ -147,7 +110,7 @@ function Landing() {
                     alt=''
                     className='landing--img'
                     style={{
-                        opacity: `${drawerOpen ? '0' : '1'}`,
+                        opacity: `${drawerOpen ? '0.7' : '1'}`,
                         borderColor: theme.secondary,
                     }}
                 />
@@ -159,33 +122,36 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6>{headerData.title}</h6>
+                        <h6 className='lcr--content--title'>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
                         <p>{headerData.desciption}</p>
+                        <h6 className='lcr--content--author'>~ Robert Louis Stevenson</h6>
 
-                        <div className='lcr-buttonContainer'>
-                            {headerData.resumePdf && (
-                                <a
-                                    href={headerData.resumePdf}
-                                    download='resume'
-                                    target='_blank'
-                                    rel='noreferrer'
+                        <div className='lcr-buttoncontainer'>
+                            <div className='lcr-buttons'>
+                                {headerData.resumePdf && (
+                                    <a
+                                        href={headerData.resumePdf}
+                                        download='resume'
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    >
+                                        <Button className={classes.resumeBtn}>
+                                            Download CV
+                                        </Button>
+                                    </a>
+                                )}
+                                <NavLink
+                                    to='/#contacts'
+                                    smooth={true}
+                                    spy='true'
+                                    duration={2000}
                                 >
-                                    <Button className={classes.resumeBtn}>
-                                        Download CV
+                                    <Button className={classes.contactBtn}>
+                                        Contatti
                                     </Button>
-                                </a>
-                            )}
-                            <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <Button className={classes.contactBtn}>
-                                    Contact
-                                </Button>
-                            </NavLink>
+                                </NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>
