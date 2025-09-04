@@ -20,10 +20,10 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
+            width: '140px',
             fontSize: '1rem',
             fontWeight: '500',
-            height: '50px',
+            height: '45px',
             fontFamily: 'var(--primaryFont)',
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
@@ -39,8 +39,8 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
-            height: '50px',
+            width: '140px',
+            height: '45px',
             fontSize: '1rem',
             fontWeight: '500',
             fontFamily: 'var(--primaryFont)',
@@ -129,6 +129,16 @@ function Landing() {
 
                         <div className='lcr-buttoncontainer'>
                             <div className='lcr-buttons'>
+                                <NavLink
+                                    to='/#contacts'
+                                    smooth={true}
+                                    spy='true'
+                                    duration={2000}
+                                >
+                                    <Button className={classes.contactBtn}>
+                                        Contatti
+                                    </Button>
+                                </NavLink>
                                 {headerData.resumePdf && (
                                     <a
                                         href={headerData.resumePdf}
@@ -141,16 +151,6 @@ function Landing() {
                                         </Button>
                                     </a>
                                 )}
-                                <NavLink
-                                    to='/#contacts'
-                                    smooth={true}
-                                    spy='true'
-                                    duration={2000}
-                                >
-                                    <Button className={classes.contactBtn}>
-                                        Contatti
-                                    </Button>
-                                </NavLink>
                             </div>
                         </div>
                     </div>
