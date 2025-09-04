@@ -55,8 +55,8 @@ function Navbar() {
             fontSize: ' 24px',
             background: theme.secondary,
             overflow: 'hidden',
-            borderTopRightRadius: '40px',
-            borderBottomRightRadius: '40px',
+            borderTopLeftRadius: '40px',
+            borderBottomLeftRadius: '40px',
             [t.breakpoints.down('sm')]: {
                 width: '12em',
             },
@@ -123,11 +123,7 @@ function Navbar() {
     const classes = useStyles();
 
     const shortname = (name) => {
-        if (name.length > 12) {
-            return name.split(' ')[0];
-        } else {
-            return name;
-        }
+        return name.replace("Dott.ssa", "");
     };
 
     return (
@@ -152,7 +148,7 @@ function Navbar() {
                         handleDrawerClose();
                     }
                 }}
-                anchor='left'
+                anchor='right'
                 open={open}
                 classes={{ paper: classes.MuiDrawer }}
                 className='drawer'
@@ -177,7 +173,7 @@ function Navbar() {
 
                 <div onClick={handleDrawerClose}>
                     <div className='navLink--container'>
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/'
                                 smooth={true}
@@ -195,7 +191,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/#about'
                                 smooth={true}
@@ -211,7 +207,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/#resume'
                                 smooth={true}
@@ -229,7 +225,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/#services'
                                 smooth={true}
@@ -247,7 +243,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/#blog'
                                 smooth={true}
@@ -265,7 +261,7 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
-                        <Fade left>
+                        <Fade right>
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}
@@ -275,7 +271,7 @@ function Navbar() {
                                 <div className={classes.drawerItem}>
                                     <MdPhone className={classes.drawerIcon} />
                                     <span className={classes.drawerLinks}>
-                                        Contact
+                                        Contatti
                                     </span>
                                 </div>
                             </NavLink>
