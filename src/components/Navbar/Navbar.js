@@ -14,6 +14,9 @@ import './Navbar.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
+import greeting_brain from '../../assets/png/greeting_brain.png';
+
+
 function Navbar() {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
 
@@ -171,7 +174,7 @@ function Navbar() {
                 </div>
                 <br />
 
-                <div onClick={handleDrawerClose}>
+                <div className="drawer-content" onClick={handleDrawerClose}>
                     <div className='navLink--container'>
                         <Fade right>
                             <NavLink
@@ -245,24 +248,6 @@ function Navbar() {
 
                         <Fade right>
                             <NavLink
-                                to='/#blog'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <FaFolderOpen
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Blog
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade right>
-                            <NavLink
                                 to='/#contacts'
                                 smooth={true}
                                 spy='true'
@@ -275,6 +260,15 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
+                        </Fade>
+                    </div>
+                    <div className="navbar--image-container">
+                        <Fade right>
+                            <img
+                                src={greeting_brain}
+                                alt='greeting_brain'
+                                className='navbar--image'
+                            />
                         </Fade>
                     </div>
                 </div>
