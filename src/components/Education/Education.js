@@ -8,11 +8,12 @@ import EducationCard from './EducationCard';
 import {educationData} from '../../data/educationData'
 import graduationBrain from '../../assets/png/graduation_brain.png'
 
+
 function Education() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div className="education" id="resume" style={{backgroundColor: theme.secondary}}>
+        <div className="education" id="education" style={{backgroundColor: theme.secondary}}>
            
             <div className="education-body">
                 <div className="education-description">
@@ -23,6 +24,7 @@ function Education() {
                             id={edu.id}
                             institution={edu.institution}
                             grade={edu.grade}
+                            thesis={edu.thesis}
                             course={edu.course}
                             startYear={edu.startYear}
                             endYear={edu.endYear}
