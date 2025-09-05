@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 
-import { ThemeContext } from '../../contexts/ThemeContext';
+import {ThemeContext} from '../../contexts/ThemeContext';
 
 import './Education.css'
 import EducationCard from './EducationCard';
 
-import { educationData } from '../../data/educationData'
+import {educationData} from '../../data/educationData'
+import graduationBrain from '../../assets/png/graduation_brain.png'
 
 function Education() {
 
@@ -15,12 +16,13 @@ function Education() {
            
             <div className="education-body">
                 <div className="education-description">
-                <h1 style={{color:theme.primary}}>Education</h1>
+                <h1 style={{color:theme.primary}}>Formazione</h1>
                     {educationData.map(edu => (
                         <EducationCard 
                             key={edu.id}
                             id={edu.id}
                             institution={edu.institution}
+                            grade={edu.grade}
                             course={edu.course}
                             startYear={edu.startYear}
                             endYear={edu.endYear}
@@ -28,7 +30,7 @@ function Education() {
                     ))}
                 </div>
                 <div className="education-image">
-                    <img src={theme.eduimg} alt=""/>
+                    <img src={graduationBrain} alt=""/>
                 </div>
             </div>
         </div>

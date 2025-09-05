@@ -1,11 +1,11 @@
 .education {
-    min-height: 100vh;
+    height: auto;
 }
 
 .education-body {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     color: hsla(117, 56%, 49%, 0.702);
@@ -31,10 +31,10 @@
 .education-card {
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
+    align-items:center;
     justify-content: flex-start;
     width: 90%;
-    height: 140px;
+    height: auto;
     padding: 1.5rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -82,12 +82,19 @@
     box-sizing: border-box;
     padding: 1rem;
     flex: 0.35;
-    margin-top: 1rem;
     pointer-events: none;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky; /* aggiunto */
+    top: 2rem; /* distanza dal top della viewport */
+    align-self: flex-start; /* necessario perché sticky in flex funziona meglio */
+
 }
 
 .education-image > img {
-    width: 100%;
+    margin-top: 5rem;
+    width: 70%;
 }
 
 
@@ -130,7 +137,6 @@
     .education-card {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        height: 130px;
     }
     .educard-img {
         border-radius: 50%;
@@ -152,27 +158,38 @@
     }
     
     .education-details > h5 {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
         font-size: 1.05rem;
         line-height: 126%;
     }
+
+    .education-details {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
     .education-description > h1{
         font-size: 2.5rem;
     }
+
+    .education-details > h6 {
+        text-align: center;
+    }
 }
 
-@media screen and (max-width: 400px) {
+/*@media screen and (max-width: 400px) {*/
 
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+/*}*/
+/*  */
+/*@media only screen and (min-device-width: 320px) and (max-device-width: */
+/*  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {*/
 
-}
+/*}*/
 
 
-@media only screen and (device-width: 768px) {
+/*@media only screen and (device-width: 768px) {*/
 
-}
+/*}*/
