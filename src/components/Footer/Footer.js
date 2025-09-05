@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
+import React, {useContext} from 'react'
 import './Footer.css'
-import { ThemeContext } from '../../contexts/ThemeContext'
-import { headerData } from '../../data/headerData'
+import {ThemeContext} from '../../contexts/ThemeContext'
 
 function Footer() {
 
@@ -22,7 +21,7 @@ function Footer() {
                 <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
                     ❤
                 </span>
-                 by {shortname(headerData.name)}
+                 by <a style={{color: theme.primary}} href='https://www.linkedin.com/in/giuseppe-cardaropoli/'>Giuseppe Cardaropoli</a>
             </p>
         </div>
     )
