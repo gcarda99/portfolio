@@ -153,7 +153,15 @@ function Landing() {
                                 )}
                             </div>
                         </div>
+
+                        <div className="arrow-scroll">
+                            <div className='arrow'></div>
+                            <div className='arrow'></div>
+                            <div className='arrow'></div>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
