@@ -120,6 +120,28 @@
   .landing--social {
     font-size: 50px;
   }
+
+  .lcr--content--title {
+    font-size: 1.5rem;
+  }
+
+  .lcr--content h1 {
+    font-size: 3.5rem;
+  }
+
+  .lcr--content p {
+    font-size: 1.5rem;
+  }
+
+  .lcr--content--author {
+    font-size: 1.5rem;
+  }
+
+  .lcr-buttons button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 1100px) {
