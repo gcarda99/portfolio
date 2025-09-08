@@ -1,23 +1,23 @@
 export const experienceData = [
     {
         id: 1,
-        company: 'Globex Corporation',
-        jobtitle: 'Frontend Developer',
-        startYear: '2018',
-        endYear: '2019'
+        company: 'SalutePsy',
+        jobtitle: 'Job Title',
+        startYear: '2025',
+        endYear: 'presente'
     },
     {
         id: 2,
-        company: 'Vehement Capital Partners',
-        jobtitle: 'Backend Developer',
-        startYear: '2019',
-        endYear: '2020'
+        company: 'Università degli Studi e-Campus',
+        jobtitle: 'Psychology Tutor',
+        startYear: '2024',
+        endYear: 'presente'
     },
     {
         id: 3,
         company: 'Wonka Industries',
-        jobtitle: 'Marketing',
-        startYear: '2020',
-        endYear: 'Present'
+        jobtitle: 'Psicologa Tirocinante',
+        startYear: 'inizio',
+        endYear: 'fine'
     },
 ]

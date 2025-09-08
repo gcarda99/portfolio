@@ -164,19 +164,19 @@ function Contacts() {
         <div
             className='contacts'
             id='contacts'
-            style={{ backgroundColor: theme.secondary }}
+            style={{backgroundColor: theme.secondary}}
         >
             <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
+                <h1 style={{color: theme.primary}}>Prenota un appuntamento</h1>
                 <div className='contacts-body'>
                     <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>
                                 <label htmlFor='Name' className={classes.label}>
-                                    Name
+                                    Nome
                                 </label>
                                 <input
-                                    placeholder='John Doe'
+                                    placeholder='Sigmund Freud'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
@@ -192,7 +192,7 @@ function Contacts() {
                                     Email
                                 </label>
                                 <input
-                                    placeholder='John@doe.com'
+                                    placeholder='sigmund@freud.brain'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
@@ -205,10 +205,10 @@ function Contacts() {
                                     htmlFor='Message'
                                     className={classes.label}
                                 >
-                                    Message
+                                    Messaggio
                                 </label>
                                 <textarea
-                                    placeholder='Type your message....'
+                                    placeholder='Scrivi il tuo messaggio....'
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
@@ -222,7 +222,7 @@ function Contacts() {
                                     type='submit'
                                     className={classes.submitBtn}
                                 >
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                    <p>{!success ? 'Invia' : 'Inviato'}</p>
                                     <div className='submit-icon'>
                                         <AiOutlineSend
                                             className='send-icon'
@@ -266,7 +266,7 @@ function Contacts() {
                                             color='inherit'
                                             onClick={handleClose}
                                         >
-                                            <CloseIcon fontSize='small' />
+                                            <CloseIcon fontSize='small'/>
                                         </IconButton>
                                     </React.Fragment>
                                 }
@@ -286,53 +286,33 @@ function Contacts() {
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
-                                <FiAtSign />
+                                <FiAtSign/>
                             </div>
-                            <p style={{ color: theme.tertiary }}>
+                            <p style={{color: theme.tertiary}}>
                                 {contactsData.email}
                             </p>
                         </a>
                         <a
-                            href={`tel:${contactsData.phone}`}
+                            href={`tel:${contactsData.phone.replace(" ", "")}`}
                             className='personal-details'
                         >
                             <div className={classes.detailsIcon}>
-                                <FiPhone />
+                                <FiPhone/>
                             </div>
-                            <p style={{ color: theme.tertiary }}>
+                            <p style={{color: theme.tertiary}}>
                                 {contactsData.phone}
                             </p>
                         </a>
                         <div className='personal-details'>
                             <div className={classes.detailsIcon}>
-                                <HiOutlineLocationMarker />
+                                <HiOutlineLocationMarker/>
                             </div>
-                            <p style={{ color: theme.tertiary }}>
+                            <p style={{color: theme.tertiary}}>
                                 {contactsData.address}
                             </p>
                         </div>
 
                         <div className='socialmedia-icons'>
-                            {socialsData.twitter && (
-                                <a
-                                    href={socialsData.twitter}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaTwitter aria-label='Twitter' />
-                                </a>
-                            )}
-                            {socialsData.github && (
-                                <a
-                                    href={socialsData.github}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaGithub aria-label='GitHub' />
-                                </a>
-                            )}
                             {socialsData.linkedIn && (
                                 <a
                                     href={socialsData.linkedIn}
@@ -340,7 +320,7 @@ function Contacts() {
                                     rel='noreferrer'
                                     className={classes.socialIcon}
                                 >
-                                    <FaLinkedinIn aria-label='LinkedIn' />
+                                    <FaLinkedinIn aria-label='LinkedIn'/>
                                 </a>
                             )}
                             {socialsData.instagram && (
@@ -350,77 +330,7 @@ function Contacts() {
                                     rel='noreferrer'
                                     className={classes.socialIcon}
                                 >
-                                    <FaInstagram aria-label='Instagram' />
-                                </a>
-                            )}
-                            {socialsData.medium && (
-                                <a
-                                    href={socialsData.medium}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaMediumM aria-label='Medium' />
-                                </a>
-                            )}
-                            {socialsData.blogger && (
-                                <a
-                                    href={socialsData.blogger}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaBloggerB aria-label='Blogger' />
-                                </a>
-                            )}
-                            {socialsData.youtube && (
-                                <a
-                                    href={socialsData.youtube}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaYoutube aria-label='YouTube' />
-                                </a>
-                            )}
-                            {socialsData.reddit && (
-                                <a
-                                    href={socialsData.reddit}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaRedditAlien aria-label='Reddit' />
-                                </a>
-                            )}
-                            {socialsData.stackOverflow && (
-                                <a
-                                    href={socialsData.stackOverflow}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaStackOverflow aria-label='Stack Overflow' />
-                                </a>
-                            )}
-                            {socialsData.codepen && (
-                                <a
-                                    href={socialsData.codepen}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaCodepen aria-label='CodePen' />
-                                </a>
-                            )}
-                            {socialsData.gitlab && (
-                                <a
-                                    href={socialsData.gitlab}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaGitlab aria-label='GitLab' />
+                                    <FaInstagram aria-label='Instagram'/>
                                 </a>
                             )}
                         </div>
@@ -432,6 +342,14 @@ function Contacts() {
                 alt='contacts'
                 className='contacts--img'
             />
+            <div className="custom-shape-divider-bottom-1757341859">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                     preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        className="shape-fill"></path>
+                </svg>
+            </div>
         </div>
     );
 }

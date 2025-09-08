@@ -1,7 +1,6 @@
 export const contactsData = {
-    email: 'janedoe.test@gmail.com',
-    phone: '+915588776600',
-    address: 'Menlo Park, California, United States - 673822 ',
-
+    email: 'm.e.albano99@gmail.com',
+    phone: '+39 3317947398',
+    address: 'Mercato San Severino',
     sheetAPI: ''
 }

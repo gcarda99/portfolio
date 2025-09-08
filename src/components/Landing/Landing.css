@@ -3,6 +3,7 @@
   left: 50%;
   bottom: 8%;
   height: 100px;
+  z-index: 1;
 }
 
 .arrow {

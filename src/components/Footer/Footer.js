@@ -4,18 +4,20 @@ import {ThemeContext} from '../../contexts/ThemeContext'
 
 function Footer() {
 
-    const { theme }  = useContext(ThemeContext)
+    const {theme} = useContext(ThemeContext)
 
     return (
-        <div className="footer" style={{backgroundColor: theme.secondary}}>
-            <p style={{color: theme.tertiary}}>
-                Made with  
-                <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
+        <div className="footer">
+            <p style={{color: "white"}}>
+                Made with
+                <span style={{color: "red", margin: '0 0.5rem -1rem 0.5rem'}}>
                     ❤
                 </span>
-                 by <a style={{color: theme.primary}} href='https://www.linkedin.com/in/giuseppe-cardaropoli/'>Giuseppe Cardaropoli</a>
+                by <a style={{color: "white", textDecoration: "underline"}} href='https://www.linkedin.com/in/giuseppe-cardaropoli/'>Giuseppe
+                Cardaropoli</a>
             </p>
         </div>
+
     )
 }
 
