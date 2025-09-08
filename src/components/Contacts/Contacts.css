@@ -1,5 +1,5 @@
 .contacts {
-    min-height: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -23,7 +23,7 @@
     padding: 2rem 6rem 3rem;
     width: 100%;
     height: 100%;
-    margin-bottom: 8.5vh;
+    margin-bottom: 40vh;
 }
 
 .contacts--container > h1 {
@@ -171,8 +171,6 @@
 }
 
 .custom-shape-divider-bottom-1757341859 svg {
-    width: 100%;
-    height: 20vh;
     display: block;
 }
 
@@ -199,6 +197,7 @@
 
     .contacts--container {
         margin-top: 1rem;
+        margin-bottom: 25vh;
     }
 
     .contacts--container > h1 {
@@ -272,10 +271,6 @@
     .personal-details p {
         margin-left: 1.2rem;
     }
-
-    .custom-shape-divider-bottom-1757341859 svg {
-        width: 170%;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -290,8 +285,8 @@
         margin-bottom: 20px;
     }
 
-    .custom-shape-divider-bottom-1757341859 svg {
-        width: 200%;
+    .contacts--container {
+        margin-bottom: 12vh;
     }
 }
 
