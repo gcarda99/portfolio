@@ -23,11 +23,11 @@
     padding: 2rem 6rem 3rem;
     width: 100%;
     height: 100%;
-    margin-bottom: 40vh;
+    margin-bottom: 42vh;
 }
 
 .contacts--container > h1 {
-    font-family: var(--primaryFont);
+    font-family: var(--primaryFont), serif;
     font-size: 3.5rem;
     margin-bottom: 2.5rem;
 
@@ -63,7 +63,6 @@
 .form-input {
     height: 50px;
     box-sizing: border-box;
-    border-radius: 50px;
     outline: none;
     margin-bottom: 2rem;
     padding: 0.7rem 0.7rem;
@@ -76,7 +75,6 @@
 .form-message {
     height: 150px;
     box-sizing: border-box;
-    border-radius: 50px;
     outline: none;
     margin-bottom: 2rem;
     padding: 0.7rem 0.7rem;
@@ -102,7 +100,7 @@
 
 .submit-btn button p {
     font-size: 16px;
-    font-family: var(--primaryFont);
+    font-family: var(--primaryFont), serif;
 }
 
 .submit-icon {
@@ -149,7 +147,7 @@
     font-size: 18px;
     line-height: 110%;
     font-weight: 500;
-    font-family: var(--primaryFont);
+    font-family: var(--primaryFont), serif;
     word-break: break-word;
 }
 
@@ -227,7 +225,7 @@
 
     .contacts--container {
         padding: 2rem;
-        margin-top: 0rem;
+        margin-top: 0;
         align-items: center;
     }
 
@@ -252,8 +250,7 @@
     }
 
     .contacts-details {
-        padding-left: 0rem;
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 0;
         align-items: center;
         margin-top: 2rem;
     }
@@ -292,8 +289,7 @@
 
 @media screen and (max-width: 400px) {
     .contacts-details {
-        padding-left: 0rem;
-        padding: 0rem;
+        padding: 0;
         align-items: center;
         margin-top: 2rem;
     }
@@ -305,8 +301,7 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
     .contacts-details {
-        padding-left: 0rem;
-        padding: 0rem;
+        padding: 0;
     }
 }
 
