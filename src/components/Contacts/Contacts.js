@@ -300,29 +300,6 @@ function Contacts() {
                                     {contactsData.address}
                                 </p>
                             </div>
-
-                            {/*<div className='socialmedia-icons'>*/}
-                            {/*    {socialsData.linkedIn && (*/}
-                            {/*        <a*/}
-                            {/*            href={socialsData.linkedIn}*/}
-                            {/*            target='_blank'*/}
-                            {/*            rel='noreferrer'*/}
-                            {/*            className={classes.socialIcon}*/}
-                            {/*        >*/}
-                            {/*            <FaLinkedinIn aria-label='LinkedIn'/>*/}
-                            {/*        </a>*/}
-                            {/*    )}*/}
-                            {/*    {socialsData.instagram && (*/}
-                            {/*        <a*/}
-                            {/*            href={socialsData.instagram}*/}
-                            {/*            target='_blank'*/}
-                            {/*            rel='noreferrer'*/}
-                            {/*            className={classes.socialIcon}*/}
-                            {/*        >*/}
-                            {/*            <FaInstagram aria-label='Instagram'/>*/}
-                            {/*        </a>*/}
-                            {/*    )}*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                     <img
