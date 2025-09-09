@@ -104,6 +104,29 @@
     width: 70%;
 }
 
+@media (min-width: 2560px) {
+    .education-description > h1{
+        font-size: 4rem;
+    }
+
+    .education-details > .years {
+        font-size: 1.3rem;
+    }
+
+    .education-details > .grade {
+        font-size: 1.3rem;
+    }
+
+    .education-details > .course {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .education-details > .institution {
+        font-size: 1.55rem;
+    }
+}
+
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
