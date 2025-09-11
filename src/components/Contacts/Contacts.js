@@ -20,6 +20,7 @@ function Contacts() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
     const [success, setSuccess] = useState(false);
@@ -125,6 +126,7 @@ function Contacts() {
                 const responseData = {
                     name: name,
                     email: email,
+                    subject: subject,
                     message: message,
                 };
 
@@ -135,6 +137,7 @@ function Contacts() {
 
                     setName('');
                     setEmail('');
+                    setSubject('')
                     setMessage('');
                     setOpen(false);
                 });
@@ -186,6 +189,22 @@ function Contacts() {
                                         onChange={(e) => setEmail(e.target.value)}
                                         type='email'
                                         name='Email'
+                                        className={`form-input ${classes.input}`}
+                                    />
+                                </div>
+                                <div className='input-container'>
+                                    <label
+                                        htmlFor='Oggetto'
+                                        className={classes.label}
+                                    >
+                                        Oggetto
+                                    </label>
+                                    <input
+                                        placeholder='Appuntamento giorno/mese/anno'
+                                        value={subject}
+                                        onChange={(e) => setSubject(e.target.value)}
+                                        type='subject'
+                                        name='Subject'
                                         className={`form-input ${classes.input}`}
                                     />
                                 </div>
