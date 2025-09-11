@@ -44,7 +44,7 @@ function Footer() {
                         n. {footerData.albo}
                         {footerData?.iva && footerData?.iva.trim() !== "" && (
                             <>
-                                <br />
+                                <br/>
                                 P.IVA: {footerData.iva}
                             </>
                         )}
