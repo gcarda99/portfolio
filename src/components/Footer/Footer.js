@@ -42,8 +42,12 @@ function Footer() {
                         Iscritta all'Albo degli Psicologi della Regione Campania
                         <br/>
                         n. {footerData.albo}
-                        <br/>
-                        P.IVA: {footerData.iva}
+                        {footerData?.iva && footerData?.iva.trim() !== "" && (
+                            <>
+                                <br />
+                                P.IVA: {footerData.iva}
+                            </>
+                        )}
                     </p>
                 </div>
 
