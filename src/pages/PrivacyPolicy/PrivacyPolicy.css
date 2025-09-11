@@ -40,3 +40,17 @@
     text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+    .privacy-policy .container {
+        max-width: 70vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .privacy-policy .container {
+        max-width: 80vw;
+    }
+}
+
+
+
