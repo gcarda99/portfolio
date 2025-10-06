@@ -1,6 +1,6 @@
 export const contactsData = {
     email: 'm.e.albano99@gmail.com',
     phone: '+39 3317947398',
-    address: 'Mercato San Severino',
+    address: 'Mercato San Severino, anche Online',
     sheetAPI: ''
 }
