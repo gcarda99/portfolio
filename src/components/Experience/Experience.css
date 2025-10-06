@@ -83,9 +83,15 @@
     box-sizing: border-box;
     padding: 1rem;
     flex: 0.35;
-    margin-left: 7%;
-    margin-top: 1rem;
+    margin-left: 3em;
     pointer-events: none;
+    align-items: center;
+    justify-content: center;
+
+    /* sticky configuration */
+    position: sticky;
+    top: 5rem;
+    align-self: flex-start;
 }
 
 .experience-image > img {

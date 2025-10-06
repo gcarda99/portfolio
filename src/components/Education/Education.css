@@ -34,7 +34,7 @@
     align-items:center;
     justify-content: flex-start;
     width: 90%;
-    height: 25vh;
+    height: auto;
     padding: 1.5rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
@@ -97,7 +97,6 @@
     position: sticky;
     top: 2rem;
     align-self: flex-start;
-
 }
 
 .education-image > img {
