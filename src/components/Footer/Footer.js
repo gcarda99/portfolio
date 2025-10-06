@@ -41,7 +41,7 @@ function Footer() {
                     <p className="footer-text">
                         Iscritta all'Albo degli Psicologi della Regione Campania
                         <br/>
-                        n. {footerData.albo}
+                        n. <a href={footerData.alboUrl} target="_blank">{footerData.albo}</a>
                         {footerData?.iva && footerData?.iva.trim() !== "" && (
                             <>
                                 <br/>
@@ -64,7 +64,7 @@ function Footer() {
                 <div className="footer-column">
                     <h3 className="footer-subtitle">Legale</h3>
                     <ul>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy" target="_blank">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

@@ -38,6 +38,17 @@
     line-height: 1.5;
 }
 
+.footer-text a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s;
+}
+
+.footer-text a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 .footer-socialmedia-icons {
     width: 90%;
     display: flex;
@@ -65,6 +76,7 @@
 
 .footer-column ul li a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 .footer-bottom {
