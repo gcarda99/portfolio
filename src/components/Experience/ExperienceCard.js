@@ -9,18 +9,19 @@ import expImgBlack from '../../assets/svg/experience/expImgBlack.svg'
 
 import './Experience.css'
 
-function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
+function ExperienceCard({id, company, jobtitle, startYear, endYear, description}) {
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((t) => ({
-        experienceCard : {
-            backgroundColor:theme.primary30,
+    const useStyles = makeStyles(() => ({
+        experienceCard: {
+            backgroundColor: theme.primary30,
             "&:hover": {
-                backgroundColor:theme.primary50,
+                backgroundColor: theme.primary50,
             },
         },
     }));
+
 
     const classes = useStyles();
 
@@ -32,9 +33,10 @@ function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
                     <img src={theme.type === 'light' ? expImgBlack : expImgWhite} alt="" />
                 </div>
                 <div className="experience-details">
-                    <h6 style={{color: theme.primary}}>{startYear}-{endYear}</h6>
-                    <h4 style={{color: theme.tertiary}}>{jobtitle}</h4>
-                    <h5 style={{color: theme.tertiary80}}>{company}</h5>
+                    <h6 className="years" style={{color: theme.primary}}>{startYear} - {endYear}</h6>
+                    <h4 className="jobtitle" style={{color: theme.tertiary}}>{jobtitle}</h4>
+                    <h5 className="company" style={{color: theme.tertiary80}}>{company}</h5>
+                    <h6 className="description" style={{color: theme.tertiary80}}>{description}</h6>
                 </div>
             </div>
         </Fade>   

@@ -12,7 +12,7 @@ function EducationCard({ id, institution, course, grade, thesis,  startYear, end
 
     const { theme } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((t) => ({
+    const useStyles = makeStyles(() => ({
         educationCard : {
             backgroundColor:theme.primary30,
             "&:hover": {
@@ -30,7 +30,7 @@ function EducationCard({ id, institution, course, grade, thesis,  startYear, end
                     <img src={theme.type === 'light' ? eduImgBlack : eduImgWhite} alt="" />
                 </div>
                 <div className="education-details">
-                    <h6 className="years" style={{color: theme.primary}}>{startYear}-{endYear}</h6>
+                    <h6 className="years" style={{color: theme.primary}}>{startYear} - {endYear}</h6>
                     <h4 className="course" style={{color: theme.tertiary}}>{course}</h4>
                     <h5 className="institution" style={{color: theme.tertiary80}}>{institution}</h5>
                     <h6 className="grade" style={{color: theme.tertiary}}><strong>Voto</strong>: {grade}</h6>
