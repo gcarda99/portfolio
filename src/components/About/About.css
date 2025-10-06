@@ -61,6 +61,7 @@
 .about-img {
     margin-top: 40px;
     pointer-events: none;
+    scale: 1.25;
 }
 
 .about-img > img {

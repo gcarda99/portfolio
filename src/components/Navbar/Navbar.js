@@ -14,7 +14,7 @@ import './Navbar.css';
 import {headerData} from '../../data/headerData';
 import {ThemeContext} from '../../contexts/ThemeContext';
 
-import greeting_brain from '../../assets/png/greeting_brain.png';
+import brain from '../../assets/png/brain.png';
 
 
 function Navbar() {
@@ -265,8 +265,8 @@ function Navbar() {
                     <div className="navbar--image-container">
                         <Fade right>
                             <img
-                                src={greeting_brain}
-                                alt='greeting_brain'
+                                src={brain}
+                                alt='brain'
                                 className='navbar--image'
                             />
                         </Fade>

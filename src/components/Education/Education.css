@@ -93,9 +93,10 @@
     align-items: center;
     justify-content: center;
 
-    position: sticky; /* aggiunto */
-    top: 2rem; /* distanza dal top della viewport */
-    align-self: flex-start; /* necessario perché sticky in flex funziona meglio */
+    /* sticky configuration */
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
 
 }
 

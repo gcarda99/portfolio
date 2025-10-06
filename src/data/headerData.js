@@ -1,5 +1,5 @@
 import resume from '../assets/pdf/resume.pdf'
-import betty from '../assets/png/betty.jpg'
+import betty from '../assets/png/landing2.jpg'
 
 export const headerData = {
     name: 'Dott.ssa Albano Mariaelisabetta',
