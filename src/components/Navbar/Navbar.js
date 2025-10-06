@@ -204,7 +204,7 @@ function Navbar() {
                                 <div className={classes.drawerItem}>
                                     <FaUser className={classes.drawerIcon} />
                                     <span className={classes.drawerLinks}>
-                                        About
+                                        Su di me
                                     </span>
                                 </div>
                             </NavLink>
@@ -240,7 +240,7 @@ function Navbar() {
                                         className={classes.drawerIcon}
                                     />
                                     <span className={classes.drawerLinks}>
-                                        Services
+                                        Servizi
                                     </span>
                                 </div>
                             </NavLink>
